@@ -1,0 +1,1 @@
+DataEngineeringJourney is my personal journey into the world of data engineering. I'm on a mission to make learning data engineering both interesting and fun, while working towards becoming a skilled and knowledgeable professional. This is a space for growth, experimentation, and continuous improvement.
