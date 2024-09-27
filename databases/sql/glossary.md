@@ -1,5 +1,9 @@
 # Glossary
 
+## SQL
+
+Structured Query Language
+
 ## Table
 
 A collection of related data entries in rows and columns.

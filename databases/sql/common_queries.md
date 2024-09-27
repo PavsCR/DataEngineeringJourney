@@ -10,8 +10,6 @@ WHERE condition
     AND/OR …;
 ```
 
-## Table of conditions
-
 ### Numeric Data
 
 | **Operator**        | **Condition**                                        | **SQL Example**                       |
@@ -35,10 +33,41 @@ WHERE condition
 | IN (…)       | String exists in a list                                                                               | col_name **IN** ("A", "B", "C")                                        |
 | NOT IN (…)   | String does not exist in a list                                                                       | col_name **NOT IN** ("D", "E", "F")                                    |
 
+### Filtering and sorting Query results
+
+### Filtering and Sorting Query Results
+
+### Filtering and Sorting Query Results
+
+| **Operator**                   | **Function**                                                | **SQL Example**                                                            |
+| ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
+| DISTINCT                       | Discard rows that have a duplicate column value             | SELECT **DISTINCT** column, another_column, … FROM table_name;             |
+| GROUP BY                       | Group rows that have the same values in specified columns   | SELECT column, **COUNT**(\*) FROM table_name **GROUP BY** column;          |
+| ORDER BY                       | Sort the result set by one or more columns                  | SELECT column1, column2 FROM table_name **ORDER BY** column1 **ASC**;      |
+| HAVING                         | Filter groups based on a condition (used with **GROUP BY**) | SELECT column, SUM(amount) AS total_amount FROM table_name GROUP BY column |
+| **HAVING** SUM(amount) > 1000; |
+| LIMIT(MySQL)                   | Limit the number of rows returned                           | SELECT \* FROM table_name **LIMIT** 10;                                    |
+| OFFSET(MySQL)                  | Skip a specified number of rows before returning results    | SELECT \* FROM table_name LIMIT 10 **OFFSET** 5 ;                          |
+
+FROM mytable
+WHERE condition(s); |
+
 ## WHERE
 
 ```sql
 SELECT * FROM table_name WHERE condition; -- Filter records
+```
+
+## EXIST
+
+```sql
+SELECT c.CustomerName
+FROM Customers c
+WHERE EXISTS (
+    SELECT 1
+    FROM Orders o
+    WHERE o.CustomerID = c.CustomerID
+);
 ```
 
 ## JOIN
