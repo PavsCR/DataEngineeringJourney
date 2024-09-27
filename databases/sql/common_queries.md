@@ -39,15 +39,14 @@ WHERE condition
 
 ### Filtering and Sorting Query Results
 
-| **Operator**                   | **Function**                                                | **SQL Example**                                                            |
-| ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------- |
-| DISTINCT                       | Discard rows that have a duplicate column value             | SELECT **DISTINCT** column, another_column, … FROM table_name;             |
-| GROUP BY                       | Group rows that have the same values in specified columns   | SELECT column, **COUNT**(\*) FROM table_name **GROUP BY** column;          |
-| ORDER BY                       | Sort the result set by one or more columns                  | SELECT column1, column2 FROM table_name **ORDER BY** column1 **ASC**;      |
-| HAVING                         | Filter groups based on a condition (used with **GROUP BY**) | SELECT column, SUM(amount) AS total_amount FROM table_name GROUP BY column |
-| **HAVING** SUM(amount) > 1000; |
-| LIMIT(MySQL)                   | Limit the number of rows returned                           | SELECT \* FROM table_name **LIMIT** 10;                                    |
-| OFFSET(MySQL)                  | Skip a specified number of rows before returning results    | SELECT \* FROM table_name LIMIT 10 **OFFSET** 5 ;                          |
+| **Operator**  | **Function**                                                | **SQL Example**                                                                                           |
+| ------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| DISTINCT      | Discard rows that have a duplicate column value             | SELECT **DISTINCT** column, another_column, … FROM table_name;                                            |
+| GROUP BY      | Group rows that have the same values in specified columns   | SELECT column, **COUNT**(\*) FROM table_name **GROUP BY** column;                                         |
+| ORDER BY      | Sort the result set by one or more columns                  | SELECT column1, column2 FROM table_name **ORDER BY** column1 **ASC**;                                     |
+| HAVING        | Filter groups based on a condition (used with **GROUP BY**) | SELECT column, SUM(amount) AS total_amount FROM table_name GROUP BY column **HAVING** SUM(amount) > 1000; |
+| LIMIT(MySQL)  | Limit the number of rows returned                           | SELECT \* FROM table_name **LIMIT** 10;                                                                   |
+| OFFSET(MySQL) | Skip a specified number of rows before returning results    | SELECT \* FROM table_name LIMIT 10 **OFFSET** 5 ;                                                         |
 
 FROM mytable
 WHERE condition(s); |
