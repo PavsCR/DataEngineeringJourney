@@ -33,10 +33,6 @@ WHERE condition
 | IN (…)       | String exists in a list                                                                               | col_name **IN** ("A", "B", "C")                                        |
 | NOT IN (…)   | String does not exist in a list                                                                       | col_name **NOT IN** ("D", "E", "F")                                    |
 
-### Filtering and sorting Query results
-
-### Filtering and Sorting Query Results
-
 ### Filtering and Sorting Query Results
 
 | **Operator**  | **Function**                                                | **SQL Example**                                                                                           |
@@ -47,9 +43,6 @@ WHERE condition
 | HAVING        | Filter groups based on a condition (used with **GROUP BY**) | SELECT column, SUM(amount) AS total_amount FROM table_name GROUP BY column **HAVING** SUM(amount) > 1000; |
 | LIMIT(MySQL)  | Limit the number of rows returned                           | SELECT \* FROM table_name **LIMIT** 10;                                                                   |
 | OFFSET(MySQL) | Skip a specified number of rows before returning results    | SELECT \* FROM table_name LIMIT 10 **OFFSET** 5 ;                                                         |
-
-FROM mytable
-WHERE condition(s); |
 
 ## WHERE
 
