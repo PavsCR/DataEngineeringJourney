@@ -26,7 +26,7 @@ def sort_chars(chars_dict):
     
 
 def main():
-    book_path = "books/frankenstein.txt"
+    book_path = input("Enter the path of the book: ")
     text = get_book_text(book_path)
     word_count = count_words(text)
     chars_dict = count_chars(text)
